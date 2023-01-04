@@ -7,6 +7,14 @@ plugins {
 
 fleet {
     fleetPath.set("/Users/ignatov/Fleet/32261aa6f5d60-debug/Fleet.app/")
+
+    frontend {
+        add("org.twitter4j:twitter4j-core:4.1.1")
+    }
+
+    common {
+        add("org.apache.samza:samza-shell:0.13.1")
+    }
 }
 
 repositories {

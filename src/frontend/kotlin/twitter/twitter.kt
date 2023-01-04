@@ -10,6 +10,7 @@ import noria.model.ActionPresentation
 import noria.model.Propagate
 import noria.model.Trigger
 import noria.windowManagement.extensions.openUrl
+import twitter4j.Twitter
 
 @Entrypoint
 fun ChangeScope.registerTwitterAction() {
@@ -19,6 +20,11 @@ fun ChangeScope.registerTwitterAction() {
             Action(
                 defaultPresentation = ActionPresentation("Open Twitter"),
                 perform = { ac ->
+
+                    val twitter = Twitter.getInstance()
+
+                    println(twitter)
+
                     ac.windowManager.openUrl("https://twitter.com/jetbrains_fleet/")
                     Propagate.STOP
                 },
