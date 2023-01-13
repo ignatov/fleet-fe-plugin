@@ -6,14 +6,14 @@ plugins {
 }
 
 fleet {
-    fleetPath.set("/Users/ignatov/Fleet/32261aa6f5d60-debug/Fleet.app/")
+//    fleetPath.set("/Users/ignatov/Fleet/32261aa6f5d60-debug/Fleet.app/")
+
+//    fleetPath.set("/Users/ignatov/Fleet/87120b1bf721e-debug/Fleet.app")
+    fleetVersion.set("1.14.53")
 
     frontend {
         add("org.twitter4j:twitter4j-core:4.1.1")
-    }
-
-    common {
-        add("org.apache.samza:samza-shell:0.13.1")
+        add("com.aallam.openai:openai-client:2.1.2")
     }
 }
 
