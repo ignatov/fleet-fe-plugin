@@ -21,9 +21,14 @@ fun ChangeScope.registerTwitterAction() {
                 defaultPresentation = ActionPresentation("Open Twitter"),
                 perform = { ac ->
 
-                    val twitter = Twitter.getInstance()
+                    try {
+                        val twitter = Twitter.getInstance()
+                        println(twitter)
 
-                    println(twitter)
+                    } catch (e: Exception) {
+                        println("OOPS" + e.message)
+                    }
+
 
                     ac.windowManager.openUrl("https://twitter.com/jetbrains_fleet/")
                     Propagate.STOP
